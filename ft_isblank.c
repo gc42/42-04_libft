@@ -6,17 +6,18 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 21:22:52 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/21 21:51:29 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/23 09:48:53 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** List of blanc characters ('\t' and ' ')
+** List of blank characters ('\t' and ' ')
 */
-int		ft_isblanc(int c)
+
+int		ft_isblank(int c)
 {
 	if (c == 9 || c == 32)
-		return (c);
+		return (1);
 	else
 		return (0);
 }
