@@ -6,11 +6,15 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:16:32 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/22 09:34:30 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/27 13:54:05 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+/*
+** Print 'c' character on std output
+*/
 
 void	ft_putchar(char c)
 {

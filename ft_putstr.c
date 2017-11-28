@@ -6,11 +6,15 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:34:20 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/21 12:07:29 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/24 13:29:01 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+
+/*
+**
+*/
 
 void	ft_putstr(char const *s)
 {
@@ -19,7 +23,7 @@ void	ft_putstr(char const *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_putchar(s[i]);
+		ft_putchar(s[i]);	// VERIFIER si reecrire avec write et ft_strlen
 		i++;
 	}
 }

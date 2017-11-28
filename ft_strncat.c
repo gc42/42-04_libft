@@ -6,25 +6,37 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 18:18:09 by gcaron            #+#    #+#             */
-/*   Updated: 2017/09/18 19:56:07 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/27 09:22:32 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+#include "libft.h"
+#include <string.h>
+
+/*
+** man 3 strNcat
+** strncat() -- concatenate strings
+**
+** Append a copy of NUL terminated string 's2' to the end of NUL terminated
+** string 's1', but not more than 'n' characters, then add a terminating '\0'.
+** The string 's1' must have sufficient space to hold the result.
+**
+** RETURN the pointer 's1'.
+*/
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int		i;
 	int		j;
 
-	i = 0;
-	while (dest[i] != '\0')
-		i++;
+	i = ft_strlen(s1);
 	j = 0;
-	while (j < nb && src[j] != '\0')
+	while (j < n && s2[j] != '\0')
 	{
-		dest[i] = src[j];
+		s1[i] = s2[j];
 		i++;
 		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	s1[i] = '\0';
+	return (s1);
 }

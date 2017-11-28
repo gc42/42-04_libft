@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 18:25:05 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/23 18:20:21 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/27 20:57:11 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,92 +17,10 @@
 #include <ctype.h>
 
 // LIBRAIRIE
-//#include "libft.h"
+#include "libft.h"
 
 // LIENS VERS LES EXERCICES
-//#include "ft_bzero.c"
-
-#include "ft_isalnum.c"
-#include "ft_isalpha.c"
-#include "ft_isascii.c"
-#include "ft_isblank.c"
-#include "ft_iscntrl.c"
-#include "ft_isdigit.c"
-#include "ft_isgraph.c"
-#include "ft_islower.c"
-#include "ft_isprint.c"
-#include "ft_ispunct.c"
-#include "ft_isspace.c"
-#include "ft_isupper.c"
-#include "ft_isxdigit.c"
-
-//#include "ft_itoa.c"
-//#include "ft_memalloc.c"
-//#include "ft_memccpy.c"
-//#include "ft_memchr.c"
-//#include "ft_memcmp.c"
-//#include "ft_memcpy.c"
-//#include "ft_memdel.c"
-//#include "ft_memmove.c"
-//
-//#include "ft_putchar.c"
-//#include "ft_putchar_fd.c"
-//#include "ft_putendl.c"
-//#include "ft_putendl_fd.c"
-//#include "ft_putnbr.c"
-//#include "ft_putnbr_base.c"
-//#include "ft_putnbr_fd.c"
-//#include "ft_putstr.c"
-//#include "ft_putstr_fd.c"
-#include "ft_strcat.c"
-//#include "ft_strchr.c"
-//#include "ft_strclr.c"
-//#include "ft_strcmp.c"
-//#include "ft_strcpy.c"
-//#include "ft_strdel.c"
-//#include "ft_strdup.c"
-//#include "ft_strequ.c"
-//#include "ft_striter.c"
-//#include "ft_striteri.c"
-//#include "ft_strjoin.c"
-//#include "ft_strlcat.c"
-//#include "ft_strlcpy.c"
-#include "ft_strlen.c"
-//#include "ft_strmap.c"
-//#include "ft_strmapi.c"
-//#include "ft_strncat.c"
-//#include "ft_strncmp.c"
-//#include "ft_strncpy.c"
-//#include "ft_strnequ.c"
-//#include "ft_strnew.c"
-//#include "ft_strnstr.c"
-//#include "ft_strrchr.c"
-//#include "ft_strrev.c"
-//#include "ft_strsplit.c"
-//#include "ft_strstr.c"
-//#include "ft_strsub.c"
-//#include "ft_strtrim.c"
-//
-//#include "ft_tolower.c"
-//#include "ft_toupper.c"
-//
-
-//#include "ft_.c"
-
-/*
-// PROTOTYPES DES FONCTIONS
-size_t	ft_strlen(const char *str);
-char	*ft_strcat(char *dest, const char *src);
-int		ft_isdigit(int c);
-int		ft_isascii(int c);
-int		ft_isalnum(int c);
-int		ft_isupper(int c);
-int		ft_islower(int c);
-int		ft_isalpha(int c);
-int		ft_isalnum(int c);
-int		ft_isblanc(int c);
-*/
-
+// inutile avec une librairie
 
 // SEPARATEUR
 void	ft_entete_exo(int numexo, char *s) {
@@ -125,14 +43,15 @@ int		main(void)
 	ft_entete_exo(1, "ft_isupper");
 	// ##############################
 	printf("ft|unix|attendu pour valeur\n");
-	printf("%d|1 attendu pour A\n", isupper('A'));
-	printf("%d|1 attendu pour Z\n", isupper('Z'));
-	printf("%d|0 attendu pour b\n", isupper('b'));
-	printf("%d|0 attendu pour 127\n", isupper(127));
-	printf("%d|1 attendu pour 65\n", isupper(65));
-	printf("%d|0 attendu pour 320\n", isupper(320));
-*/
-/*
+	printf("%d|%d|1 attendu pour A\n",		ft_isupper('A'),	isupper('A'));
+	printf("%d|%d|1 attendu pour Z\n",		ft_isupper('Z'),	isupper('Z'));
+	printf("%d|%d|0 attendu pour b\n",		ft_isupper('b'),	isupper('b'));
+	printf("%d|%d|0 attendu pour 127\n",	ft_isupper(127),	isupper(127));
+	printf("%d|%d|0 attendu pour '@'64\n",	ft_isupper(64),		isupper(64));
+	printf("%d|%d|0 attendu pour '['91\n",	ft_isupper(91),		isupper(91));
+	printf("%d|%d|0 attendu pour 320\n",	ft_isupper(320),	isupper(320));
+
+
 	// ##############################
 	ft_entete_exo(2, "ft_ascii");
 	// ##############################
@@ -147,8 +66,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n", ft_isascii(320), isascii(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n", ft_isascii(-2147483648), isascii(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n", ft_isascii(2147483647),  isascii(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(3, "ft_islower");
 	// ##############################
@@ -164,8 +83,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",	ft_islower(320),	islower(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n",	ft_islower(-2147483648), islower(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n",	ft_islower(2147483647),  islower(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(4, "ft_isdigit");
 	// ##############################
@@ -181,8 +100,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",	ft_isdigit(320),	isdigit(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n", ft_isdigit(-2147483648), isdigit(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n", ft_isdigit(2147483647),  isdigit(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(5, "ft_isalpha");
 	// ##############################
@@ -200,8 +119,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",	ft_isalpha(320),	isalpha(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n", ft_isalpha(-2147483648), isalpha(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n", ft_isalpha(2147483647),  isalpha(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(6, "ft_isalnum");
 	// ##############################
@@ -221,8 +140,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",	ft_isalnum(320),	isalnum(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n", ft_isalnum(-2147483648), isalnum(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n", ft_isalnum(2147483647),  isalnum(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(7, "ft_isblank");
 	// ##############################
@@ -240,8 +159,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",	ft_isblank(320),	isblank(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n", ft_isblank(-2147483648), isblank(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n", ft_isblank(2147483647),  isblank(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(8, "ft_iscntrl");
 	// ##############################
@@ -258,8 +177,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",		ft_iscntrl(320),	iscntrl(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n",	ft_iscntrl(-2147483648), iscntrl(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n",	ft_iscntrl(2147483647),  iscntrl(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(9, "ft_isprint");
 	// ##############################
@@ -275,8 +194,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",		ft_isprint(320),	isprint(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n",	ft_isprint(-2147483648), isprint(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n",	ft_isprint(2147483647),  isprint(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(10, "ft_ispunct");
 	// ##############################
@@ -298,8 +217,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",		ft_ispunct(320),	ispunct(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n",	ft_ispunct(-2147483648), ispunct(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n",	ft_ispunct(2147483647),  ispunct(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(11, "ft_isspace");
 	// ##############################
@@ -318,8 +237,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour 320\n",		ft_isspace(320),	isspace(320));
 	printf("%d|%d|0 attendu pour INT_MIN\n",	ft_isspace(-2147483648), isspace(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n",	ft_isspace(2147483647),  isspace(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(12, "ft_isxdigit");
 	// ##############################
@@ -343,8 +262,8 @@ int		main(void)
 	printf("%d|%d|0 attendu pour INT_MIN\n", ft_isxdigit(-2147483648), isxdigit(-2147483648));
 	printf("%d|%d|0 attendu pour INT_MAX\n", ft_isxdigit(2147483647),  isxdigit(2147483647));
 	printf("%d|%d|0 attendu pour INT_MAX\n",	ft_isspace(2147483647),  isspace(2147483647));
-*/
-/*
+
+
 	// ##############################
 	ft_entete_exo(13, "ft_isgraph");
 	// ##############################
@@ -366,33 +285,54 @@ int		main(void)
 	// ##############################
 	ft_entete_exo(14, "ft_strlen");
 	// ##############################
-	char	*s11 = "0123456789";
-	char	*s12 = "abc";
-	char	*s13 = "";
-	printf("%zu|10 attendu\n", ft_strlen(s11));
-	printf("%zu|3 attendu\n", ft_strlen(s12));
-	printf("%zu|0 attendu\n", ft_strlen(s13));
+	char	*s141 = "0123456789";
+	char	*s142 = "abc";
+	char	*s143 = "";
+	printf("ft|unix|attendu pour valeur\n");
+	printf("%3zu|%-3zu|10 attendu\n", ft_strlen(s141),	strlen(s141));
+	printf("%3zu|%-3zu|3 attendu\n", ft_strlen(s142),	strlen(s142));
+	printf("%3zu|%-3zu|0 attendu\n", ft_strlen(s143),	strlen(s143));
 */
 
 
 /*
 	// ##############################
-	ft_entete_exo(0, "ft_strcat");
+	ft_entete_exo(15, "ft_strcat");
 	// ##############################
-	char	*s21 = "012";
-	char	*s22 = "abc";
-	char	*s23 = "";
-	printf("%s|unix\n", strcat(s21, s22));
-//	printf("%s|012abc attendu\n", ft_strcat(s21, s22));
-//	printf("%s|abc012 attendu\n", ft_strcat(s22, s21));
-//	printf("%s|abc attendu\n",    ft_strcat(s23, s22));
+	printf("ft|unix|attendu|\n");
+	char	s151a[100] = "012";
+	char	s151b[100] = "012";
+	char	s151c[] = "abc";
+	printf("%s|012abc|unix\n",     strcat(s151a, s151c));
+	printf("%s|012abc|moi\n",   ft_strcat(s151b, s151c));
+	char	s152a[100] = "";
+	char	s152b[100] = "";
+	char	s152c[] = "";
+	printf("%s|abc|unix\n",   strcat(s152a, s152c));
+	printf("%s|abc|moi\n", ft_strcat(s152b, s152c));
+	char	s153a[100] = "";
+	char	s153b[100] = "";
+	char	s153c[] = "";
+	printf("%s||unix\n",       strcat(s153a, s153c));
+	printf("%s||moi\n",     ft_strcat(s153b, s153c));
+//	char	s154a[] = "000";
+//	char	s154b[] = "000";
+//	char	s154c[4] = "xxxx";
+//	printf("%s||moi\n",     ft_strcat(s154b, s154c));// s1 trop petit
+//	printf("%s||unix\n",       strcat(s154a, s154c));// unix abort
 */
 
-/*
+
 	// ##############################
-	ft_entete_exo(0, "ft_strchr");
+	ft_entete_exo(16, "ft_strchr");
 	// ##############################
-*/
+	char	s161[] = "totoAtoto";
+	char	s162[] = "totoXtoto";
+	char	*str;
+	printf("|%c|A|moi", *ft_strchr(s161, 65));
+	printf("|%c|A|unix", *strchr(s161, 65));
+//	printf("%c", *ft_strchr(s162, 65));
+	printf("%c", *strchr(s162, 65));
 
 /*
 	// ##############################

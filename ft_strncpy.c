@@ -6,24 +6,40 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 14:29:55 by gcaron            #+#    #+#             */
-/*   Updated: 2017/09/19 16:35:36 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/27 10:57:51 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <string.h>
+
+/*
+** man 3 strNcpy
+** strncpy() -- copy strings
+**
+** Copy at most 'len' characters from 'src' into 'dst'.
+** If 'src' is less than 'len' characters long, the remainder
+** of 'dst' is filled with `\0' characters.
+** Otherwise, dst is not terminated.  !!!!!!!!!!!!!  ATTENTION  !!!
+**
+** The src and dest strings should not overlap, as the behavior is undefined.
+**
+** RETURN 'dst'
+*/
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (i < len && src[i] != '\0')
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	while (i < n)
+	while (i < len)
 	{
-		dest[i] = '\0';
+		dst[i] = '\0';
 		i++;
 	}
-	return (dest);
+	return (dst);
 }

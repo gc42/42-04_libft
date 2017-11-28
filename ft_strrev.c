@@ -6,9 +6,20 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 23:08:52 by gcaron            #+#    #+#             */
-/*   Updated: 2017/09/07 19:38:02 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/27 12:24:58 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+/*
+** self-made function
+** ft_strrev() takes the string 'str' as argument and return the same string
+** with all characters reversed  order, first become last and so on.
+** Ex: "abcdefg" become "gfedcba".
+**
+** RETURN reversed 'str'.
+*/
 
 char	*ft_strrev(char *str)
 {
@@ -17,11 +28,7 @@ char	*ft_strrev(char *str)
 	int		j;
 	int		len;
 
-	len = 1;
-	while (str[len] != '\0')
-	{
-		len++;
-	}
+	len = ft_strlen(str);
 	i = 0;
 	j = len - 1;
 	while (i < j)
