@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 18:53:36 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 13:50:32 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/28 17:34:25 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 
 void	*ft_memalloc(size_t size)
 {
-	return (0);
-	// A TERMINER
+	void	*fresh;
+/*
+	fresh = malloc(size + 1);
+	if (fresh == NULL)
+		return (NULL);
+	while (size >= 0)
+		*fresh = 0;  // A TERMINER:w
+*/
+	return (fresh);
 }

@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 19:02:05 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 13:50:47 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/30 09:13:28 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,17 @@
 ** is undefined.
 */
 
-void	ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	// A TERMINER
-//	return (0);
+	while (n && *(unsigned char*)src != (unsigned char)c)
+	{
+		*(unsigned char*)dst++ = *(unsigned char*)src++;
+		n--;
+	}
+	if (n > 0)
+	{
+		*(unsigned char*)dst++ = *(unsigned char*)src++;
+		return (dst);
+	}
+	return (NULL);
 }

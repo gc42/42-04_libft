@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 09:13:46 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 14:57:00 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/30 08:47:23 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,13 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	// A TERMINER
-	n++;
-	return (0);
+	unsigned char	*tmp;
+
+	tmp = (unsigned char*)dst;
+	while (n)
+	{
+		*tmp++ = *(unsigned char*)src++;
+		n--;
+	}
+	return (dst);
 }

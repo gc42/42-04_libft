@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 14:29:29 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/24 14:35:52 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/28 13:57:47 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 
 void	ft_strdel(char **as)
 {
-	// A TERMINER
-	// VERIFIER SI LA DESCRIPTION NE COMPORTE PAS UNE ERREUR
-	// "et son pointeur mis a NULL" => "et met son pointeur a NULL"
+	if (as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

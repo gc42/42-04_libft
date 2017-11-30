@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 11:55:38 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/24 14:54:18 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/29 18:17:20 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,3 @@ char	*ft_strdup(const char *s1)
 	return (str_copy);
 	// VERIFIER QUE "errno is set to ENOMEM
 }
-

@@ -6,7 +6,7 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/11/27 16:30:30 by gcaron           ###   ########.fr        #
+#    Updated: 2017/11/30 18:39:14 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ DSRC		=	./
 
 DIR_INCL	=	./
 
-SRC			=	$(DSRC)ft_bzero.c\
+SRC			=	$(DSRC)ft_atoi.c\
+				$(DSRC)ft_bzero.c\
 				$(DSRC)ft_isalnum.c\
 				$(DSRC)ft_isalpha.c\
 				$(DSRC)ft_isascii.c\
@@ -39,6 +40,7 @@ SRC			=	$(DSRC)ft_bzero.c\
 				$(DSRC)ft_memcpy.c\
 				$(DSRC)ft_memdel.c\
 				$(DSRC)ft_memmove.c\
+				$(DSRC)ft_memset.c\
 				$(DSRC)ft_putchar.c\
 				$(DSRC)ft_putchar_fd.c\
 				$(DSRC)ft_putendl.c\
@@ -100,11 +102,15 @@ $(LIB_NAME):	$(OBJ)
 			ar rc $(LIB_NAME) $(OBJ)			## creation de la lib
 			ranlib $(LIB_NAME)					## creation de l'index de la libft
 
-$(OBJ):		$(SRC)						## verif fichiers .c tous dispo
+##$(OBJ):		$(SRC)						## verif fichiers .c tous dispo
+%.o: %.c
 			$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)	## pre-compil des .o
 
 exe:		$(LIB_NAME) main_libft.c
 			$(CC) $(CFLAGS) -o $(EXE_NAME) main_libft.c $(INCLUDES) $(LIB)
+
+help:
+	@echo "Cibles disponibles : all, clean, fclean, re, help"
 
 .PHONY: clean fclean					## les dependances de la cible .PHONY
 										## sont systematiquement reconstruites

@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:37:01 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 08:22:48 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/30 17:34:31 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 
 size_t		ft_strlen(const char *s)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (*s++)
 		i++;
 	return (i);
 }

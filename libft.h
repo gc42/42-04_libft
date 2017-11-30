@@ -6,15 +6,16 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:24:42 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 16:46:41 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/30 08:58:41 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
+# include <string.h>
 
+int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -31,12 +32,13 @@ int		ft_isupper(int c);
 int		ft_isxdigit(int c);
 char	*ft_itoa(int n);
 void	*ft_memalloc(size_t size);
-void	ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	ft_memdel(void **ap);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *s);
@@ -77,6 +79,5 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
 
 #endif

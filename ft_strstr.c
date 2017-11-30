@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 16:31:08 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 12:50:06 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/29 18:18:13 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	
 	unsigned int	i;
 
 	i = 0;

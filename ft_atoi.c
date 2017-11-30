@@ -6,15 +6,15 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 00:43:59 by gcaron            #+#    #+#             */
-/*   Updated: 2017/09/12 16:10:58 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/30 18:48:20 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
-	int		i;
-	int		sign;
-	int		atoi;
+	unsigned int	i;
+	int				sign;
+	long long int	atoi;
 
 	i = 0;
 	sign = 1;
@@ -36,5 +36,5 @@ int		ft_atoi(char *str)
 		atoi = (atoi * 10) + (str[i] - '0');
 		i++;
 	}
-	return (atoi * sign);
+	return ((int)(atoi * sign));
 }

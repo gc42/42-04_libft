@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 15:41:48 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/24 15:51:39 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/11/29 18:17:39 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 **
 ** RETURN nothing
 */
-
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
