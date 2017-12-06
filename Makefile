@@ -6,12 +6,13 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/11/30 18:39:14 by gcaron           ###   ########.fr        #
+#    Updated: 2017/12/05 09:54:28 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIB_NAME		=	libft.a
+NAME		=	libft.a
 EXE_NAME		=	a.out
+MAIN_NAME		=	main_ft_str_cw.c
 
 DSRC		=	./
 
@@ -50,6 +51,7 @@ SRC			=	$(DSRC)ft_atoi.c\
 				$(DSRC)ft_putnbr_fd.c\
 				$(DSRC)ft_putstr.c\
 				$(DSRC)ft_putstr_fd.c\
+				$(DSRC)ft_str_cw.c\
 				$(DSRC)ft_strcat.c\
 				$(DSRC)ft_strchr.c\
 				$(DSRC)ft_strclr.c\
@@ -95,19 +97,19 @@ LIB		=	-L. -lft
 
 RM			=	rm -f
 
-all:
-			@make $(LIB_NAME)
+all:		$(NAME)
+#			@make $(NAME)
 
-$(LIB_NAME):	$(OBJ)
-			ar rc $(LIB_NAME) $(OBJ)			## creation de la lib
-			ranlib $(LIB_NAME)					## creation de l'index de la libft
+$(NAME):	$(OBJ)
+			ar rc $(NAME) $(OBJ)			## creation de la lib
+			ranlib $(NAME)					## creation de l'index de la libft
 
 ##$(OBJ):		$(SRC)						## verif fichiers .c tous dispo
 %.o: %.c
 			$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)	## pre-compil des .o
 
-exe:		$(LIB_NAME) main_libft.c
-			$(CC) $(CFLAGS) -o $(EXE_NAME) main_libft.c $(INCLUDES) $(LIB)
+exe:		$(LIB_NAME) $(MAIN_NAME)
+			$(CC) $(CFLAGS) -o $(EXE_NAME) $(MAIN_NAME) $(INCLUDES) $(LIB)
 
 help:
 	@echo "Cibles disponibles : all, clean, fclean, re, help"
@@ -120,7 +122,7 @@ clean:
 			$(RM) *.o
 
 fclean:		clean
-			$(RM) $(LIB_NAME)				## supprime l'executable (ici libft.a)
+			$(RM) $(NAME)				## supprime l'executable (ici libft.a)
 			$(RM) $(EXE_NAME)				## supprime l'exe (ici a.out)
 
 re:			fclean all

@@ -6,12 +6,13 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 12:50:30 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 13:00:58 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/04 08:17:58 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
 /*
 ** Alloacte (with malloc(3)) and return a "fresh" copy of a sub-part of
@@ -24,6 +25,19 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	return (0);
-	// A TERMINER
+	char	*str;
+	char	*ptr_tmp;
+
+	str = (char*)malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (NULL);
+	ptr_tmp = str;
+	s = s + start;
+	while (len)
+	{
+		*ptr_tmp++ = *s++;
+		len--;
+	}
+	*ptr_tmp = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:24:42 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/30 08:58:41 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/05 09:53:40 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	ft_putnbr_base(int nbr, char *base);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
+int		ft_str_cw(char const *s, char c);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);

@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 15:52:20 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/24 15:58:43 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/01 15:05:26 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,17 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	//A TERMINER
-	return (0);
+	char	*str;
+	char	*ptr;
+
+	str = (char*)malloc(sizeof(str) * (ft_strlen(s1) + strlen(s2)));
+	if (str == NULL)
+		return (NULL);
+	ptr = str;
+	while (*s1)
+		*ptr++ = *s1++;
+	while (*s2)
+		*ptr++ = *s2++;
+	*ptr = '\0';
+	return (str);
 }

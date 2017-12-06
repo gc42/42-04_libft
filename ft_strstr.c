@@ -6,10 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 16:31:08 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/29 18:18:13 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/01 14:50:21 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 /*
 ** man 3 strstr
 **
@@ -25,7 +26,7 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	unsigned int	i;
+	size_t		i;
 
 	i = 0;
 	while (haystack[i] == needle[i] && haystack[i] && needle[i])

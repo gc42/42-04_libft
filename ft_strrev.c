@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 23:08:52 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 12:24:58 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/04 16:31:36 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** self-made function
 ** ft_strrev() takes the string 'str' as argument and return the same string
-** with all characters reversed  order, first become last and so on.
+** with all characters in reversed  order, first become last and so on.
 ** Ex: "abcdefg" become "gfedcba".
 **
 ** RETURN reversed 'str'.

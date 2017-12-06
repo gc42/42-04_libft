@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 14:54:34 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 11:11:22 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/01 09:14:28 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	return (0);
-	// S'INSPIRER DE strcmp
+	size_t		i;
+
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] && s2[i])
+		i++;
+	if ( (unsigned char)s1[i] ==  (unsigned char)s2[i] )
+		return (1);
+	else
+		return (0);
 }
