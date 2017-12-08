@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 14:47:26 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/04 17:10:01 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/07 03:48:50 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 int		ft_str_cw(char const *s, char c)
 {
 	size_t		i;
-	size_t		nbr_words;
+	int			nbr_words;
 
 	if (s == NULL)
 		return (0);

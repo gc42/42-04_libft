@@ -6,13 +6,14 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 13:22:55 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/29 18:01:42 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 19:52:56 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** List of printable characters in standard ascii table
 */
+
 int		ft_isprint(int c)
 {
 	if (' ' <= c && c <= '~')

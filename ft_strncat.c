@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 18:18:09 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/27 09:22:32 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 20:42:36 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		j;
+	size_t		i;
+	size_t		j;
 
 	i = ft_strlen(s1);
 	j = 0;

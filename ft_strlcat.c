@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 18:33:10 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/30 17:17:04 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 21:19:24 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,11 @@
 ** or that dst is not a proper ``C'' string).  The check exists to prevent
 ** potential security problems in incorrect code.
 ** (...see more in man page)
-** => if size-1 <  dst then no space to work and return size + src
-** => if size-1 >= dst then concatene and return dst + src
+**
+** IN OTHER WORDS:
+** => if size <  (len_dst + 1) then no space to work and return size + src
+** => if size >= (len_dst + 1) then concatene n characters and return dst + src,
+** with n = size - len_dst, then NUL terminated.
 */
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
@@ -52,17 +55,15 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	size_t		i;
 	size_t		j;
 
-	if (size == 0)
-		return (0);
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
-	if ((size - 1) < len_dst)
+	if (size < len_dst + 1)
 		return (size + len_src);
-	if ((size - 1) >= len_dst)
+	if (size >= len_dst + 1)
 	{
 		i = 0;
 		j = len_dst;
-		while (i < ((size - 1) - len_dst) && src[i] != '\0')
+		while (i < (size - (len_dst + 1)) && src[i] != '\0')
 			dst[j++] = src[i++];
 		dst[j] = '\0';
 	}

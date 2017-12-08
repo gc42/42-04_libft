@@ -6,11 +6,12 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 16:31:08 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/01 14:50:21 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/08 13:19:43 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+
 /*
 ** man 3 strstr
 **
@@ -34,6 +35,6 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	if (needle[i] == '\0')
 		return ((char *)haystack);
 	if (haystack[i] == '\0')
-		return (0);
+		return (NULL);
 	return (ft_strstr(haystack + 1, needle));
 }

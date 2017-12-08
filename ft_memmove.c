@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 09:27:21 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/30 15:53:32 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 19:56:50 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (str_src < str_dst)
 	{
 		n = len;
-		str_src = str_src + len -1;
-		str_dst = str_dst + len -1;
-		while (n)
-		{
+		str_src = str_src + len - 1;
+		str_dst = str_dst + len - 1;
+		while (n--)
 			*str_dst-- = *str_src--;
-			n--;
-		}
 	}
-	 else if (str_src > str_dst)
+	else if (str_src > str_dst)
 	{
 		n = 0;
-		while (n < len)
-		{
+		while (n++ < len)
 			*str_dst++ = *str_src++;
-			n++;
-		}
 	}
 	return (dst);
 }

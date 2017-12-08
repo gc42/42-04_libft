@@ -6,11 +6,12 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:36:11 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/30 17:47:51 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 21:53:19 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
 ** The strrchr() function locates the last occurrence of 'c' (converted to
 ** a char) in the string pointed to by 's'.
@@ -23,16 +24,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t		len;
+	int		len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
-	s = s + len;
-	while (len && *s != (unsigned char)c)
+	s = s + (len);
+	while ((len) && *s != (unsigned char)c)
 	{
 		s--;
 		len--;
 	}
-	if (len > 0)
+	if (*s == (unsigned char)c)
 		return ((char*)s);
 	return (NULL);
 }

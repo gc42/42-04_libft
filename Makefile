@@ -6,20 +6,25 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/12/05 09:54:28 by gcaron           ###   ########.fr        #
+#    Updated: 2017/12/08 14:29:28 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 EXE_NAME		=	a.out
-MAIN_NAME		=	main_ft_str_cw.c
+##MAIN_NAME		=	main_ft_str_cw.c
+MAIN_NAME		=	main_ft_bases.c
 
 DSRC		=	./
 
 DIR_INCL	=	./
 
 SRC			=	$(DSRC)ft_atoi.c\
+				$(DSRC)ft_atoi_base.c\
 				$(DSRC)ft_bzero.c\
+				$(DSRC)ft_ctoi.c\
+				$(DSRC)ft_find_next_prime.c\
+				$(DSRC)ft_is_prime.c\
 				$(DSRC)ft_isalnum.c\
 				$(DSRC)ft_isalpha.c\
 				$(DSRC)ft_isascii.c\
@@ -33,7 +38,10 @@ SRC			=	$(DSRC)ft_atoi.c\
 				$(DSRC)ft_isspace.c\
 				$(DSRC)ft_isupper.c\
 				$(DSRC)ft_isxdigit.c\
+				$(DSRC)ft_iterative_power.c\
 				$(DSRC)ft_itoa.c\
+				$(DSRC)ft_itoa_base.c\
+				$(DSRC)ft_itoc.c\
 				$(DSRC)ft_memalloc.c\
 				$(DSRC)ft_memccpy.c\
 				$(DSRC)ft_memchr.c\
@@ -51,7 +59,15 @@ SRC			=	$(DSRC)ft_atoi.c\
 				$(DSRC)ft_putnbr_fd.c\
 				$(DSRC)ft_putstr.c\
 				$(DSRC)ft_putstr_fd.c\
+				$(DSRC)ft_sort_integer_table.c\
+				$(DSRC)ft_sqrt.c\
 				$(DSRC)ft_str_cw.c\
+				$(DSRC)ft_str_is_alpha.c\
+				$(DSRC)ft_str_is_lowercase.c\
+				$(DSRC)ft_str_is_numeric.c\
+				$(DSRC)ft_str_is_printable.c\
+				$(DSRC)ft_str_is_uppercase.c\
+				$(DSRC)ft_strcapitalize.c\
 				$(DSRC)ft_strcat.c\
 				$(DSRC)ft_strchr.c\
 				$(DSRC)ft_strclr.c\
@@ -66,6 +82,7 @@ SRC			=	$(DSRC)ft_atoi.c\
 				$(DSRC)ft_strlcat.c\
 				$(DSRC)ft_strlcpy.c\
 				$(DSRC)ft_strlen.c\
+				$(DSRC)ft_strlowcase.c\
 				$(DSRC)ft_strmap.c\
 				$(DSRC)ft_strmapi.c\
 				$(DSRC)ft_strncat.c\
@@ -81,6 +98,7 @@ SRC			=	$(DSRC)ft_atoi.c\
 				$(DSRC)ft_strstr.c\
 				$(DSRC)ft_strsub.c\
 				$(DSRC)ft_strtrim.c\
+				$(DSRC)ft_strupcase.c\
 				$(DSRC)ft_tolower.c\
 				$(DSRC)ft_toupper.c
 

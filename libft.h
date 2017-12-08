@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:24:42 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/05 09:53:40 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/08 14:14:44 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 # include <string.h>
 
 int		ft_atoi(const char *str);
+int		ft_atoi_base(const char *str, const char *base);
 void	ft_bzero(void *s, size_t n);
+int		ft_ctoi(char c);
+int		ft_find_next_prime(int nb);
+int		ft_is_prime(int nb);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -30,7 +34,9 @@ int		ft_ispunct(int c);
 int		ft_isspace(int c);
 int		ft_isupper(int c);
 int		ft_isxdigit(int c);
+int		ft_iterative_power(int nb, int power);
 char	*ft_itoa(int n);
+int		ft_itoc(int i);
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
@@ -48,7 +54,16 @@ void	ft_putnbr_base(int nbr, char *base);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
+void	ft_sort_integer_table(int *tab, int size);
+int		ft_sqrt(int nb);
 int		ft_str_cw(char const *s, char c);
+int		ft_str_is_alpha(char *str);
+int		ft_str_is_lowercase(char *str);
+int		ft_str_is_numeric(char *str);
+int		ft_str_is_printable(char *str);
+int		ft_str_is_uppercase(char *str);
+
+char	*ft_strcapitalize(char *str);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);
@@ -63,6 +78,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+char	*ft_strlowcase(char *str);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strncat(char *s1, const char *s2, size_t n);
@@ -78,6 +94,7 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
+char	*ft_strupcase(char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 

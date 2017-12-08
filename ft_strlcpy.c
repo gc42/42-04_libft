@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 10:05:45 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/04 08:10:36 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 23:10:23 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@
 ** undefined.
 **
 ** RETURN The strlcpy() functions return the total length of the string they
-** tried to create. For strlcpy() that means the length of src.
+** tried to create. For strlcpy() that means the length of src... even if
+** 'size = 0' (but in this case, no characters are copied).
 ** See more and exemples in man.
 */
 
@@ -39,6 +40,8 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 	len_src = 0;
 	while (src[len_src] != '\0')
 		len_src++;
+	if (size == 0)
+		return (len_src);
 	i = 0;
 	while (i < (size - 1) && src[i] != '\0')
 	{

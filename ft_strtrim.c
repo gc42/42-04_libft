@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 13:01:27 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/05 17:20:45 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 20:25:50 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 ** If allocation fails, function return NULL.
 **
 ** RETURN The "fresh" trimmed chain or a copy of 's'.
-**
 */
 
 char	*ft_strtrim(char const *s)

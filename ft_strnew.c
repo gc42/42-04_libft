@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:11:58 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/30 19:45:56 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 20:21:16 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 char	*ft_strnew(size_t size)
 {
-	char	*str;
+	char		*str;
 	size_t		i;
 
 	str = (char*)malloc(sizeof(char) * size + 1);

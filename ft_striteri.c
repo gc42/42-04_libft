@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 15:41:48 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/29 18:17:39 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/07 00:00:15 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,15 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	// A TERMINER
-	// VERIFIER que le sujet a ete bien compris par GC !!!
-	// car j'ai l'impression qu'on l'applique que sur le caractere
-	// passe en parametre !!!!!!!!!!!!!!!!!
+	unsigned int	i;
+
+	i = 0;
+	if (s && f)
+	{
+		while (s[i])
+		{
+			f(i, &s[i]);
+			i++;
+		}
+	}
 }

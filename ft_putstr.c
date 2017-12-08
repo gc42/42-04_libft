@@ -6,24 +6,21 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:34:20 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/29 18:12:30 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 20:36:00 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
-**
+** Print string 's' on standard output.
 */
 
 void	ft_putstr(char const *s)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (s)
 	{
-		ft_putchar(s[i]);	// VERIFIER si reecrire avec write et ft_strlen
-		i++;
+		while (*s)
+			ft_putchar(*s++);
 	}
 }

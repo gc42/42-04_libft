@@ -6,11 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 09:55:19 by gcaron            #+#    #+#             */
-/*   Updated: 2017/11/22 14:42:33 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/06 20:50:19 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 /*
 ** Print string 's' on file descriptor 'fd'
@@ -19,13 +19,10 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (s)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		while (*s)
+			ft_putchar_fd(*s++, fd);
+		ft_putchar_fd('\n', fd);
 	}
-	ft_putchar_fd('\n', fd);
 }
