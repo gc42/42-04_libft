@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 14:54:34 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:00:28 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/11 13:42:04 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/13 18:29:43 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** ft_strequ() compare lexicographically 's1' and 's2'. If the two chains
-** are identical, the function return 1, else 0.
-**
-** RETURN: s1 == s2 then return 1, else 0.
+** Add 'new' element at the beginning of the list. The new element whas created
+** using ft_lstnew().
+** RETURN nothing
 */
 
-int		ft_strequ(char const *s1, char const *s2)
+void	ft_lstadd(t_list **alst, t_list *new_lst)
 {
-	size_t		i;
-
-	if ((s1 == NULL || s2 == NULL))
-		return (0);
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
-		i++;
-	if ((unsigned char)s1[i] == (unsigned char)s2[i])
-		return (1);
-	else
-		return (0);
+	new_lst->next = *alst;
+	*alst = new_lst;
 }

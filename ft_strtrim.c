@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 13:01:27 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/06 20:25:50 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/13 18:09:03 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strtrim(char const *s)
 	char const	*s_end;
 	char		*tmp;
 
+	if (s == NULL)
+		return (NULL);
 	s_end = s + ft_strlen(s) - 1;
 	while (*s == ' ' || *s == '\t' || *s == '\n')
 		s++;

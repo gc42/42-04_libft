@@ -6,12 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 03:40:45 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/08 16:32:18 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/13 18:22:50 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 ** See D5x21
@@ -40,7 +39,7 @@ static char		ft_test_base(const char *base)
 	if (len < 2)
 		return (0);
 	i = 0;
-	while (i++ < len -1)
+	while (i++ < len - 1)
 	{
 		if (base[i] == '-' || base[i] == '+' || !(ft_isgraph(base[i])))
 			return (0);
@@ -56,8 +55,8 @@ static char		ft_test_base(const char *base)
 
 static int		ft_test_str(const char *str, const char *base)
 {
-	unsigned int		i;
-	unsigned int		j;
+	unsigned int	i;
+	unsigned int	j;
 
 	if (str == NULL || *str == '\0')
 		return (0);
@@ -87,8 +86,7 @@ static int		ft_my_atoi(const char *str, const char *base, unsigned char b)
 	i = 0;
 	sign = 1;
 	atoi = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
+	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
 	{
@@ -107,22 +105,18 @@ static int		ft_my_atoi(const char *str, const char *base, unsigned char b)
 	return ((int)(atoi * sign));
 }
 
-int		ft_atoi_base(const char *str, const char *base)
+int				ft_atoi_base(const char *str, const char *base)
 {
 	unsigned char	b;
 	unsigned char	s;
-	int		n;
+	int				n;
 
 	if (base == NULL || str == NULL)
 		return (0);
 	b = ft_test_base(base);
 	s = ft_test_str(str, base);
-	printf("%d|%d|>b|s|>> validite de base et str\n", b, s);
 	n = 1;
 	if (b != 0 && s != 0)
-	{
-		printf("l123");
 		n = ft_my_atoi(str, base, b);
-	}
 	return (n);
 }

@@ -6,24 +6,28 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/12/08 14:29:28 by gcaron           ###   ########.fr        #
+#    Updated: 2017/12/13 14:35:10 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 EXE_NAME		=	a.out
+MAIN_NAME		=	main_libft.c
 ##MAIN_NAME		=	main_ft_str_cw.c
-MAIN_NAME		=	main_ft_bases.c
+##MAIN_NAME		=	main_ft_bases.c
+##MAIN_NAME		=	main_listesChainees.c
 
 DSRC		=	./
 
 DIR_INCL	=	./
 
-SRC			=	$(DSRC)ft_atoi.c\
+SRC			=	$(DSRC)ft_abs.c\
+				$(DSRC)ft_atoi.c\
 				$(DSRC)ft_atoi_base.c\
 				$(DSRC)ft_bzero.c\
 				$(DSRC)ft_ctoi.c\
 				$(DSRC)ft_find_next_prime.c\
+				$(DSRC)ft_intlen.c\
 				$(DSRC)ft_is_prime.c\
 				$(DSRC)ft_isalnum.c\
 				$(DSRC)ft_isalpha.c\
@@ -100,7 +104,18 @@ SRC			=	$(DSRC)ft_atoi.c\
 				$(DSRC)ft_strtrim.c\
 				$(DSRC)ft_strupcase.c\
 				$(DSRC)ft_tolower.c\
-				$(DSRC)ft_toupper.c
+				$(DSRC)ft_toupper.c\
+				$(DSRC)ft_stk_clear.c\
+				$(DSRC)ft_stk_lenght.c\
+				$(DSRC)ft_stk_pop.c\
+				$(DSRC)ft_stk_printstk.c\
+				$(DSRC)ft_stk_push.c\
+				$(DSRC)ft_lstadd.c\
+				$(DSRC)ft_lstdel.c\
+				$(DSRC)ft_lstdelone.c\
+				$(DSRC)ft_lstiter.c\
+				$(DSRC)ft_lstmap.c\
+				$(DSRC)ft_lstnew.c
 
 OBJ			=	$(SRC:.c=.o)
 

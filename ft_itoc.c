@@ -6,13 +6,13 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 12:19:37 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/08 12:42:16 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/11 22:20:44 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Convert an integer in corresponding character in range '123456789' then
-** 'abcdefghijklmnopqrstuvwxyz'. Can be used in base convertions such as 
+** 'abcdefghijklmnopqrstuvwxyz'. Can be used in base convertions such as
 ** ft_atoi_base from a base to base 10.
 **
 ** RETURN the corresponding index in ASCII table

@@ -6,13 +6,12 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 12:25:17 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/06 23:18:05 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/13 18:35:18 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 /*
 ** Allocate (with malloc(3)) and return a tab of "fresh" strings (all NULL-ter-

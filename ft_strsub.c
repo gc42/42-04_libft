@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 12:50:30 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/04 08:17:58 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/13 18:01:38 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*ptr_tmp;
 
 	str = (char*)malloc(sizeof(char) * len + 1);
-	if (str == NULL)
+	if (str == NULL || s == NULL)
 		return (NULL);
 	ptr_tmp = str;
 	s = s + start;

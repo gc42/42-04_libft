@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:12:20 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/08 10:00:31 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/11 22:30:36 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** Voir D5x20
 */
 
-static unsigned char		ft_test_base(char *base)
+static unsigned char	ft_test_base(char *base)
 {
 	unsigned char	len;
 	unsigned char	i;
@@ -30,7 +30,7 @@ static unsigned char		ft_test_base(char *base)
 	if (len < 2)
 		return (0);
 	i = 0;
-	while (i++ < len -1)
+	while (i++ < len - 1)
 	{
 		if (base[i] == '-' || base[i] == '+' || !(ft_isgraph(base[i])))
 			return (0);
@@ -44,19 +44,19 @@ static unsigned char		ft_test_base(char *base)
 	return (len);
 }
 
-static void		ft_print_base(long int n, char *base, unsigned char b)
+static void				ft_print_base(long int n, char *base, unsigned char b)
 {
-		if (n < 0)
-		{
-			ft_putchar('-');
-			n = -n;
-		}
-		if (n / b)
-			ft_print_base(n / b, base, b);
-		ft_putchar(base[n % b]);
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n / b)
+		ft_print_base(n / b, base, b);
+	ft_putchar(base[n % b]);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void					ft_putnbr_base(int nbr, char *base)
 {
 	unsigned char	b;
 	long int		n;

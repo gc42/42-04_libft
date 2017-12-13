@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_stk_push.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 14:54:34 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:00:28 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/11 21:02:46 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/11 21:21:58 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /*
-** ft_strequ() compare lexicographically 's1' and 's2'. If the two chains
-** are identical, the function return 1, else 0.
-**
-** RETURN: s1 == s2 then return 1, else 0.
+** ft_push() function add's an element on the stack.
 */
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_stk_push(t_stack **p, int val)
 {
-	size_t		i;
+	t_stack		*element;
 
-	if ((s1 == NULL || s2 == NULL))
-		return (0);
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
-		i++;
-	if ((unsigned char)s1[i] == (unsigned char)s2[i])
-		return (1);
-	else
-		return (0);
+	element = malloc(sizeof(t_stack));
+	if (element == NULL)
+		return (-1);
+	element->value = val;
+	element->prev = *p;
+	*p = element;
+	return (0);
 }

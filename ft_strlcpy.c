@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 10:05:45 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/06 23:10:23 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/13 18:15:31 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t		len_src;
 	size_t		i;
 
+	if (dest == NULL)
+		return (0);
 	len_src = 0;
 	while (src[len_src] != '\0')
 		len_src++;

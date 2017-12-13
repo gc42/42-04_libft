@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 11:36:11 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/06 21:53:19 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/12 14:43:26 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		len;
 
-	if (!s)
-		return (NULL);
 	len = ft_strlen(s);
 	s = s + (len);
 	while ((len) && *s != (unsigned char)c)

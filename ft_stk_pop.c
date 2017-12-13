@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_stk_pop.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/24 14:54:34 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:00:28 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/11 21:02:04 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/11 21:21:09 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /*
-** ft_strequ() compare lexicographically 's1' and 's2'. If the two chains
-** are identical, the function return 1, else 0.
-**
-** RETURN: s1 == s2 then return 1, else 0.
+** ft_pop() remove the last element on the stack and return its value.
 */
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_stk_pop(t_stack **p)
 {
-	size_t		i;
+	int			val;
+	t_stack		*tmp;
 
-	if ((s1 == NULL || s2 == NULL))
-		return (0);
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i])
-		i++;
-	if ((unsigned char)s1[i] == (unsigned char)s2[i])
-		return (1);
-	else
-		return (0);
+	if (*p == NULL)
+		return (-1);
+	tmp = (*p)->prev;
+	val = (*p)->value;
+	free(*p);
+	*p = tmp;
+	return (val);
 }
