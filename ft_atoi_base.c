@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 03:40:45 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:22:50 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/14 18:36:53 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,20 @@ static char		ft_test_base(const char *base)
 	unsigned char	i;
 	unsigned char	j;
 
-	if (base == NULL || base[0] == '\0' || base[1] == '\0')
-		return (0);
 	len = ft_strlen(base);
-	if (len < 2)
-		return (0);
 	i = 0;
-	while (i++ < len - 1)
+	while (i < len - 1)
 	{
 		if (base[i] == '-' || base[i] == '+' || !(ft_isgraph(base[i])))
 			return (0);
 		j = i + 1;
-		while (j++ < len)
+		while (j < len)
 		{
 			if (base[i] == base[j])
 				return (0);
+			j++;
 		}
+		i++;
 	}
 	return (len);
 }
@@ -56,25 +54,38 @@ static char		ft_test_base(const char *base)
 static int		ft_test_str(const char *str, const char *base)
 {
 	unsigned int	i;
-	unsigned int	j;
+	int				sign;
 
-	if (str == NULL || *str == '\0')
-		return (0);
+	sign = 1;
 	i = 0;
-	while (str[i])
+	if (str[i] == '-')
 	{
-		if (str[i] == '-' || str[i] == '+' || !(ft_isgraph(str[i])))
-			return (0);
-		j = 0;
-		while (base[j])
-		{
-			if (str[i] != base[j])
-				return (0);
-			j++;
-		}
+		sign = -1;
 		i++;
 	}
-	return (-1);
+	if (str[i] == '+' && sign == 1)
+		i++;
+	while (str[i] != '\0')
+	{
+		if (ft_strchr(base, (int)str[i]) == NULL)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+static int		ft_rank_in_base(const char c, const char *base)
+{
+	unsigned int	j;
+
+	j = 0;
+	while (base[j] != '\0')
+	{
+		if (c == base[j])
+			return (j);
+		j++;
+	}
+	return (0);
 }
 
 static int		ft_my_atoi(const char *str, const char *base, unsigned char b)
@@ -95,11 +106,9 @@ static int		ft_my_atoi(const char *str, const char *base, unsigned char b)
 	}
 	if (str[i] == '+' && sign == 1)
 		i++;
-	while (('0' <= str[i] && str[i] <= '9')
-			|| ('a' <= str[i] && str[i] <= 'z')
-			|| ('A' <= str[i] && str[i] <= 'Z'))
+	while (str[i] != '\0')
 	{
-		atoi = (atoi * b) + (ft_ctoi(str[i]));
+		atoi = (atoi * b) + ft_rank_in_base(str[i], base);
 		i++;
 	}
 	return ((int)(atoi * sign));
@@ -108,15 +117,19 @@ static int		ft_my_atoi(const char *str, const char *base, unsigned char b)
 int				ft_atoi_base(const char *str, const char *base)
 {
 	unsigned char	b;
-	unsigned char	s;
 	int				n;
+	int				s;
 
-	if (base == NULL || str == NULL)
+	if (base == NULL || base[0] == '\0' || base[1] == '\0'
+			|| str == NULL || str[0] == '\0')
 		return (0);
 	b = ft_test_base(base);
 	s = ft_test_str(str, base);
-	n = 1;
+	n = 0;
 	if (b != 0 && s != 0)
+	{
 		n = ft_my_atoi(str, base, b);
-	return (n);
+		return (n);
+	}
+	return (0);
 }

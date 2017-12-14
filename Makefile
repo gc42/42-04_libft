@@ -6,13 +6,13 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/12/13 14:35:10 by gcaron           ###   ########.fr        #
+#    Updated: 2017/12/14 11:01:43 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
-EXE_NAME		=	a.out
-MAIN_NAME		=	main_libft.c
+EXE_NAME		=	../x_libft/a.out
+MAIN_NAME		=	../x_libft/main_libft.c
 ##MAIN_NAME		=	main_ft_str_cw.c
 ##MAIN_NAME		=	main_ft_bases.c
 ##MAIN_NAME		=	main_listesChainees.c
@@ -46,6 +46,7 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_itoa.c\
 				$(DSRC)ft_itoa_base.c\
 				$(DSRC)ft_itoc.c\
+				$(DSRC)ft_max.c\
 				$(DSRC)ft_memalloc.c\
 				$(DSRC)ft_memccpy.c\
 				$(DSRC)ft_memchr.c\
@@ -54,6 +55,7 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_memdel.c\
 				$(DSRC)ft_memmove.c\
 				$(DSRC)ft_memset.c\
+				$(DSRC)ft_min.c\
 				$(DSRC)ft_putchar.c\
 				$(DSRC)ft_putchar_fd.c\
 				$(DSRC)ft_putendl.c\
@@ -65,6 +67,7 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_putstr_fd.c\
 				$(DSRC)ft_sort_integer_table.c\
 				$(DSRC)ft_sqrt.c\
+				$(DSRC)ft_sqrtplus.c\
 				$(DSRC)ft_str_cw.c\
 				$(DSRC)ft_str_is_alpha.c\
 				$(DSRC)ft_str_is_lowercase.c\

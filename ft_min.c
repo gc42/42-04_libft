@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/11 12:22:35 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/14 10:41:04 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/14 10:02:38 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/14 18:37:23 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Find racine carre entiere of a given integer passed as argument.
+** Compare two integers and RETURN the minus one.
 */
 
-int		ft_sqrt(int nb)
+int		ft_min(int a, int b)
 {
-	unsigned int	racin;
-
-	if (nb < 0 || 2147395600 < nb)
-		return (0);
-	if (nb == 1)
-		return (1);
-	racin = 1;
-	while ((racin * racin) <= nb)
-	{
-		if ((racin * racin) == nb)
-			return (racin);
-		racin++;
-	}
-	return (0);
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }

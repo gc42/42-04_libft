@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:24:42 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/12 14:36:15 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/14 10:51:58 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int				ft_isxdigit(int c);
 int				ft_iterative_power(int nb, int power);
 char			*ft_itoa(int n);
 int				ft_itoc(int i);
+int				ft_max(int a, int b);
 void			*ft_memalloc(size_t size);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
@@ -60,6 +61,7 @@ void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			ft_memdel(void **ap);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
+int				ft_min(int a, int b);
 void			ft_putchar(char c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl(char const *s);
@@ -71,6 +73,7 @@ void			ft_putstr(char const *s);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_sort_integer_table(int *tab, int size);
 int				ft_sqrt(int nb);
+int				ft_sqrtplus(int nb);
 int				ft_str_cw(char const *s, char c);
 int				ft_str_is_alpha(char *str);
 int				ft_str_is_lowercase(char *str);
