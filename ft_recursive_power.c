@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/11 10:05:25 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/07 03:28:33 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/15 13:22:20 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/15 13:40:00 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Find the power of a given number. Both number and power are passed as
-** arguments. RETURN the power result as an integer.
+** ft_recursive_power() function returns 'nb' power 'power'.
+** RETURN :
+** if power is negative return '0'
+** if 'nb == 0' and 'power != 0', return '0'
+** if power == 0, return '1'
+** else, return result of 'nb' power 'power'. !! If the value is greater than
+** val of INT_MAX, the result is % INT_MIN->INT_MAX.
 */
 
-int		ft_iterative_power(int nb, int power)
+int		ft_recursive_power(int nb, int power)
 {
-	unsigned int	i;
-	unsigned int	result;
-
 	if (power < 0 || (nb == 0 && power != 0))
 		return (0);
 	if (power == 0)
 		return (1);
-	i = 1;
-	result = 1;
-	while (i <= power)
-	{
-		result = result * nb;
-		i++;
-	}
-	return (result);
+	return (nb * ft_recursive_power(nb, power - 1));
 }

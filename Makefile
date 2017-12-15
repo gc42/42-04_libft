@@ -6,7 +6,7 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/12/14 11:01:43 by gcaron           ###   ########.fr        #
+#    Updated: 2017/12/15 13:25:14 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_isspace.c\
 				$(DSRC)ft_isupper.c\
 				$(DSRC)ft_isxdigit.c\
-				$(DSRC)ft_iterative_power.c\
 				$(DSRC)ft_itoa.c\
 				$(DSRC)ft_itoa_base.c\
 				$(DSRC)ft_itoc.c\
@@ -65,6 +64,7 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_putnbr_fd.c\
 				$(DSRC)ft_putstr.c\
 				$(DSRC)ft_putstr_fd.c\
+				$(DSRC)ft_recursive_power.c\
 				$(DSRC)ft_sort_integer_table.c\
 				$(DSRC)ft_sqrt.c\
 				$(DSRC)ft_sqrtplus.c\

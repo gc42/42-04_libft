@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:24:42 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/14 10:51:58 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/15 13:24:50 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ int				ft_ispunct(int c);
 int				ft_isspace(int c);
 int				ft_isupper(int c);
 int				ft_isxdigit(int c);
-int				ft_iterative_power(int nb, int power);
 char			*ft_itoa(int n);
 int				ft_itoc(int i);
 int				ft_max(int a, int b);
@@ -71,6 +70,7 @@ void			ft_putnbr_base(int nbr, char *base);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr(char const *s);
 void			ft_putstr_fd(char const *s, int fd);
+int				ft_recursive_power(int nb, int power);
 void			ft_sort_integer_table(int *tab, int size);
 int				ft_sqrt(int nb);
 int				ft_sqrtplus(int nb);
