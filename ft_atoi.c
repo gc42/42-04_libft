@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 00:43:59 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 17:05:33 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 17:27:49 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int		ft_atoi(const char *str)
 	long long int			sign;
 	unsigned long long int	atoi;
 
-	i = 0;
-	atoi = 0;
 	if (str[0] == '\0')
 		return (0);
+	i = 0;
+	atoi = 0;
 	while (ft_isspace(str[i]))
 		i++;
 	sign = (str[i] == '-' ? -1 : 1);

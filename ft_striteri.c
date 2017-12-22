@@ -6,11 +6,9 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 15:41:48 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/07 00:00:15 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 16:21:04 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 ** ft_striteri() function apply the function 'f' on the character of

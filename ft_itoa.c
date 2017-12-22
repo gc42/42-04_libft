@@ -6,11 +6,10 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 18:45:31 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:24:09 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 15:28:10 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 /*
@@ -24,7 +23,7 @@
 ** conveniant order in the string.
 */
 
-static void		ft_nbr2str(int n, char *tmp)
+static void		ft_nbr2str(char *tmp, int n)
 {
 	int		x;
 
@@ -61,6 +60,6 @@ char			*ft_itoa(int n)
 	if (str == NULL)
 		return (NULL);
 	tmp = str;
-	ft_nbr2str(n, tmp);
+	ft_nbr2str(tmp, n);
 	return (str);
 }

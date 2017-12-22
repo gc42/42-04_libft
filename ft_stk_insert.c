@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stk_push.c                                      :+:      :+:    :+:   */
+/*   ft_stk_insert.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/11 21:02:46 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/11 21:21:58 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/20 14:10:37 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/21 17:20:28 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,28 @@
 #include "libft.h"
 
 /*
-** ft_push() function add's an element on the stack.
+** ft_stk_insert() function can insert a new element just after current one
+** The stack list is simple chained (sll for single linked list),
+** typed as LIFO
 */
 
-int		ft_stk_push(t_stack **p, int val)
+int			ft_stk_insert(t_stack **p, int n)
 {
-	t_stack		*element;
+	t_stack		*new;
 
-	element = malloc(sizeof(t_stack));
-	if (element == NULL)
+	new = malloc(sizeof(t_stack));
+	if (new == NULL)
 		return (-1);
-	element->value = val;
-	element->prev = *p;
-	*p = element;
-	return (0);
+	new->value = n;
+	if (*p == NULL)
+	{
+		new->next = *p;
+		*p = new;
+	}
+	else
+	{
+		new->next = (*p)->next;
+		(*p)->next = new;
+	}
+	return (n);
 }

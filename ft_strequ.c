@@ -6,11 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 14:54:34 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:00:28 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 16:18:17 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 /*
 ** ft_strequ() compare lexicographically 's1' and 's2'. If the two chains

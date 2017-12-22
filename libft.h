@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 09:24:42 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/15 13:24:50 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 14:03:18 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct	s_list
 typedef struct	s_stack
 {
 	int				value;
-	struct s_stack	*prev;
+	struct s_stack	*next;
 }				t_stack;
 
 int				ft_abs(int	nbr);
@@ -116,11 +116,15 @@ char			*ft_strupcase(char *str);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 
-void			ft_stk_clear(t_stack **p);
+int				ft_stk_addtail(t_stack **p, int n);
+int				ft_stk_addtop(t_stack **p, int n);
 int				ft_stk_lenght(t_stack *p);
-int				ft_stk_pop(t_stack **p);
-void			ft_stk_printstk(t_stack *p);
-int				ft_stk_push(t_stack **p, int val);
+void			ft_stk_print(t_stack *p);
+int				ft_stk_insert(t_stack **p, int n);
+void			ft_stk_rmall(t_stack **p);
+int				ft_stk_rmnext(t_stack **p);
+int				ft_stk_rmtail(t_stack **p);
+int				ft_stk_rmtop(t_stack **p);
 
 void			ft_lstadd(t_list **alst, t_list *new_lst);
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));

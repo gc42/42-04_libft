@@ -6,9 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 10:39:19 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/07 02:31:28 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 15:42:12 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 /*
 ** GC ft_strcapitalize() function capitalise every word's first character
@@ -48,6 +50,8 @@ char			*ft_strcapitalize(char *str)
 {
 	int		i;
 
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	i++;
 	while (str[i] != '\0')

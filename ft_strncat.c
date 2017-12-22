@@ -6,12 +6,12 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 18:18:09 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/06 20:42:36 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 16:30:32 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <string.h>
+#include "libft.h"
 
 /*
 ** man 3 strNcat

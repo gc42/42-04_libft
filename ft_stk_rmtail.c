@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_stk_rmtail.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:42:58 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/21 15:40:58 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/19 23:43:52 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/21 11:15:04 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+#include <stdlib.h>
 
 /*
-** Return '1' if all characters of string 'str' given as argument
-** are all in uppercase.
-** Else return '0'.
+** ft_stk_rmtail() function removes the tail element of the chain.
 */
 
-int		ft_str_is_uppercase(char *str)
+int		ft_stk_rmtail(t_stack **p)
 {
-	int		i;
+	int			val;
+	t_stack		*tmp;
+	t_stack		*before;
 
-	i = 0;
-	if (str == NULL || str[0] == '\0')
-		return (1);
-	while (str[i] != '\0')
+	if (*p == NULL)
+		return (-1);
+	tmp = *p;
+	while (tmp->next)
 	{
-		if (!('A' <= str[i] && str[i] <= 'Z'))
-			return (0);
-		i++;
+		before = tmp;
+		tmp = tmp->next;
 	}
-	return (1);
+	val = tmp->value;
+	free(tmp);
+	before->next = NULL;
+	return (val);
 }

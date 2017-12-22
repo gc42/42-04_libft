@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stk_pop.c                                       :+:      :+:    :+:   */
+/*   ft_stk_addtop.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/11 21:02:04 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/11 21:21:09 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/19 23:40:43 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/21 11:13:51 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 #include "libft.h"
 
 /*
-** ft_pop() remove the last element on the stack and return its value.
+** ft_addtop() function add's an element on the stack.
 */
 
-int		ft_stk_pop(t_stack **p)
+int		ft_stk_addtop(t_stack **p, int n)
 {
-	int			val;
-	t_stack		*tmp;
+	t_stack		*element;
 
-	if (*p == NULL)
+	element = malloc(sizeof(t_stack));
+	if (element == NULL)
 		return (-1);
-	tmp = (*p)->prev;
-	val = (*p)->value;
-	free(*p);
-	*p = tmp;
-	return (val);
+	element->value = n;
+	element->next = *p;
+	*p = element;
+	return (n);
 }

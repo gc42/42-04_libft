@@ -6,10 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/05 23:08:52 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/07 01:27:40 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 16:29:15 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
 
 /*
@@ -23,10 +24,10 @@
 
 char	*ft_strrev(char *str)
 {
-	int		temp;
-	int		i;
-	int		j;
-	int		len;
+	int			temp;
+	size_t		i;
+	size_t		j;
+	size_t		len;
 
 	len = ft_strlen(str);
 	i = 0;

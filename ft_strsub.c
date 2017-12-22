@@ -6,13 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 12:50:30 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/13 18:01:38 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 16:33:04 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <string.h>
-#include "libft.h"
 
 /*
 ** Alloacte (with malloc(3)) and return a "fresh" copy of a sub-part of

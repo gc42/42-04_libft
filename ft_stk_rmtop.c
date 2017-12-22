@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stk_print_stk.c                                 :+:      :+:    :+:   */
+/*   ft_stk_rmtop.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/11 21:03:35 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/11 21:29:55 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/19 23:42:11 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/21 11:15:18 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 /*
-** ft_view() print values of all elements ont the stack.
+** ft_rmtop() remove the last element on the stack and return its value.
 */
 
-void	ft_stk_printstk(t_stack *p)
+int		ft_stk_rmtop(t_stack **p)
 {
-	while (p)
-	{
-		ft_putnbr(p->value);
-		ft_putchar('\n');
-		p = p->prev;
-	}
+	int			val;
+	t_stack		*tmp;
+
+	if (*p == NULL)
+		return (-1);
+	tmp = (*p)->next;
+	val = (*p)->value;
+	free(*p);
+	*p = tmp;
+	return (val);
 }

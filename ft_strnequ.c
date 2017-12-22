@@ -6,11 +6,11 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 10:58:04 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/06 22:46:02 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 16:23:37 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 /*
 ** ft_strnequ() compare lexicographically 's1' and 's2' for a  maximum of

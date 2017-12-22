@@ -1,15 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_stk_print.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/07 03:42:49 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/12 14:13:01 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/11 21:03:35 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/21 17:21:23 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /*
-** Voir
+** ft_view() print values of all elements ont the stack.
 */
+
+void	ft_stk_print(t_stack *p)
+{
+	while (p)
+	{
+		ft_putnbr(p->value);
+		ft_putstr(" > ");
+		p = p->next;
+	}
+	ft_putstr("NULL\n");
+}

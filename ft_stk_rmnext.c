@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_stk_rmnext.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 13:42:58 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/21 15:40:58 by gcaron           ###   ########.fr       */
+/*   Created: 2017/12/21 13:42:50 by gcaron            #+#    #+#             */
+/*   Updated: 2017/12/21 13:59:34 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
 /*
-** Return '1' if all characters of string 'str' given as argument
-** are all in uppercase.
-** Else return '0'.
+** ft_stk_rmnext() function remove next element of the single linked list (sll)
 */
 
-int		ft_str_is_uppercase(char *str)
+int		ft_stk_rmnext(t_stack **p)
 {
-	int		i;
+	int			val;
+	t_stack		*tmp;
 
-	i = 0;
-	if (str == NULL || str[0] == '\0')
-		return (1);
-	while (str[i] != '\0')
-	{
-		if (!('A' <= str[i] && str[i] <= 'Z'))
-			return (0);
-		i++;
-	}
-	return (1);
+	if ((*p)->next == NULL)
+		return (-1);
+	val = (*p)->next->value;
+	tmp = (*p)->next;
+	(*p)->next = tmp->next;
+	free(tmp);
+	return (val);
 }

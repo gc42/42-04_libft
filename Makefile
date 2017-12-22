@@ -6,7 +6,7 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/12/15 13:25:14 by gcaron           ###   ########.fr        #
+#    Updated: 2017/12/21 14:03:47 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,6 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_isupper.c\
 				$(DSRC)ft_isxdigit.c\
 				$(DSRC)ft_itoa.c\
-				$(DSRC)ft_itoa_base.c\
 				$(DSRC)ft_itoc.c\
 				$(DSRC)ft_max.c\
 				$(DSRC)ft_memalloc.c\
@@ -108,11 +107,15 @@ SRC			=	$(DSRC)ft_abs.c\
 				$(DSRC)ft_strupcase.c\
 				$(DSRC)ft_tolower.c\
 				$(DSRC)ft_toupper.c\
-				$(DSRC)ft_stk_clear.c\
+				$(DSRC)ft_stk_addtail.c\
+				$(DSRC)ft_stk_addtop.c\
 				$(DSRC)ft_stk_lenght.c\
-				$(DSRC)ft_stk_pop.c\
-				$(DSRC)ft_stk_printstk.c\
-				$(DSRC)ft_stk_push.c\
+				$(DSRC)ft_stk_print.c\
+				$(DSRC)ft_stk_insert.c\
+				$(DSRC)ft_stk_rmall.c\
+				$(DSRC)ft_stk_rmnext.c\
+				$(DSRC)ft_stk_rmtail.c\
+				$(DSRC)ft_stk_rmtop.c\
 				$(DSRC)ft_lstadd.c\
 				$(DSRC)ft_lstdel.c\
 				$(DSRC)ft_lstdelone.c\

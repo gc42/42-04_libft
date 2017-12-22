@@ -6,11 +6,10 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 13:34:24 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/12 13:08:39 by gcaron           ###   ########.fr       */
+/*   Updated: 2017/12/21 15:28:49 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 /*
@@ -24,16 +23,12 @@
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list		*element_to_delete;
-	t_list		*tmp_next;
+	t_list	*tmp_next;
 
-	element_to_delete = *alst;
-	while (element_to_delete)
+	while (*alst)
 	{
-		tmp_next = element_to_delete->next;
-		del(element_to_delete->content, element_to_delete->content_size);
-		free(element_to_delete);
-		element_to_delete = tmp_next;
+		tmp_next = (*alst)->next;
+		ft_lstdelone(alst, del);
+		*alst = tmp_next;
 	}
-	*alst = NULL;
 }
