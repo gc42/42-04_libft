@@ -6,7 +6,7 @@
 /*   By: gcaron <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/11 12:22:35 by gcaron            #+#    #+#             */
-/*   Updated: 2017/12/14 10:52:02 by gcaron           ###   ########.fr       */
+/*   Updated: 2018/01/05 17:32:21 by gcaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int		ft_sqrtplus(int nb)
 {
-	unsigned int	racin;
+	int	racin;
 
 	if (nb < 0)
 		return (0);
