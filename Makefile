@@ -6,7 +6,7 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2018/01/05 18:07:37 by gcaron           ###   ########.fr        #
+#    Updated: 2018/01/05 19:01:03 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,7 +127,7 @@ OBJ			=	$(SRC:.c=.o)
 CC			=	gcc
 
 ##CFLAGS		=	
-##CFLAGS		=	-Wall -Werror -Wextra
+CFLAGS		=	-Wall -Werror -Wextra
 
 INCLUDES	=	-I $(DIR_INCL)
 
@@ -143,8 +143,8 @@ $(NAME):	$(OBJ)
 			ranlib $(NAME)			## creation de l'index de la libft
 
 ##$(OBJ):		$(SRC)				## verif fichiers .c tous dispo
-%.o: %.c
-			$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)	## pre-compil des .o
+#%.o: %.c
+#			$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)	## pre-compil des .o
 
 exe:		$(LIB_NAME) $(MAIN_NAME)
 			$(CC) $(CFLAGS) -o $(EXE_NAME) $(MAIN_NAME) $(INCLUDES) $(LIB)
