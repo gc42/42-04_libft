@@ -6,16 +6,15 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2018/01/05 15:46:21 by gcaron           ###   ########.fr        #
+#    Updated: 2018/01/05 18:07:37 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
-EXE_NAME		=	../x_libft/a.out
-MAIN_NAME		=	../x_libft/main_libft.c
-##MAIN_NAME		=	main_ft_str_cw.c
-##MAIN_NAME		=	main_ft_bases.c
-##MAIN_NAME		=	main_listesChainees.c
+EXE_NAME		=	~/projects/x_libft/a.out
+MAIN_NAME		=	~/projects/x_libft/main_libft.c
+##MAIN_NAME		=	~/projects/x_libft/main_ft_bases.c
+##MAIN_NAME		=	~/projects/x_libft/main_listesChainees.c
 
 DSRC		=	./
 
