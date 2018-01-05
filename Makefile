@@ -6,7 +6,7 @@
 #    By: gcaron <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/16 17:54:08 by gcaron            #+#    #+#              #
-#    Updated: 2017/12/21 14:03:47 by gcaron           ###   ########.fr        #
+#    Updated: 2018/01/05 15:46:21 by gcaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -140,10 +140,10 @@ all:		$(NAME)
 #			@make $(NAME)
 
 $(NAME):	$(OBJ)
-			ar rc $(NAME) $(OBJ)			## creation de la lib
-			ranlib $(NAME)					## creation de l'index de la libft
+			ar rc $(NAME) $(OBJ)	## creation de la lib
+			ranlib $(NAME)			## creation de l'index de la libft
 
-##$(OBJ):		$(SRC)						## verif fichiers .c tous dispo
+##$(OBJ):		$(SRC)				## verif fichiers .c tous dispo
 %.o: %.c
 			$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)	## pre-compil des .o
 
@@ -151,17 +151,17 @@ exe:		$(LIB_NAME) $(MAIN_NAME)
 			$(CC) $(CFLAGS) -o $(EXE_NAME) $(MAIN_NAME) $(INCLUDES) $(LIB)
 
 help:
-	@echo "Cibles disponibles : all, clean, fclean, re, help"
+	@echo "Cibles disponibles : all, clean, fclean, re, exe, help"
 
-.PHONY: clean fclean					## les dependances de la cible .PHONY
-										## sont systematiquement reconstruites
+.PHONY: clean fclean			## les dependances de la cible .PHONY
+								## sont systematiquement reconstruites
 
 clean:
-			$(RM) $(OBJ)				## supprime les fichiers .o
+			$(RM) $(OBJ)		## supprime les fichiers .o
 			$(RM) *.o
 
 fclean:		clean
-			$(RM) $(NAME)				## supprime l'executable (ici libft.a)
-			$(RM) $(EXE_NAME)				## supprime l'exe (ici a.out)
+			$(RM) $(NAME)		## supprime l'executable (ici libft.a)
+			$(RM) $(EXE_NAME)	## supprime l'exe (ici a.out)
 
 re:			fclean all
